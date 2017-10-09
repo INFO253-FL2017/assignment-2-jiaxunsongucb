@@ -1,14 +1,187 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Assignment 2</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="/static/css/style.css" />
-	</head>
-	<body>
-		<h1>Hello World</h1>
-
-		<script src="/static/js/script.js"></script>
-
-	</body>
-</html>		
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Leo Babauta's Blog</title>
+    <!-- The existing framework I applied. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The files I wrote by myself. -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+  </head>
+  <body class="container-full">
+    <header class="row">
+      <div class="col-5">
+        <h1 class="row no-margin-bottom justify-content-center" id="main-title">Leo Babauta's Blog</h1>
+        <nav class="row nav no-margin-top justify-content-center">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact" target="_blank">Contact Us</a>
+        </nav>
+      </div> 
+      <div class="col-4 align-self-center">
+        <div class="row justify-content-around">
+          <button class="col-3" type="button" name="like" onclick="likeNumberPlus()" style="height:30px;width:200px"><i class="fa fa-thumbs-o-up"></i>&nbsp;Like</button>
+          <button class="col-3" type="button" name="follow" onclick="followNumberPlus()" style="height:30px;width:200px"><i class="fa fa-plus"></i>&nbsp;Follow</button>
+        </div>        
+      </div>  
+    </header>
+    <div class="row justify-content-between"  id="main-content">
+      <div class="col-3" id="left-col">
+        <div class="row left-col-row">
+          <div class="col" id="info">
+            <div class="row justify-content-center">
+              <img id="portrait" class="rounded-circle" src="/static/images/index/portrait.png" alt="portrait">
+            </div>
+            <div class="row justify-content-center text-justify">
+              <h6>Leo Babauta</h6>
+              <p>I wish I was a little bit taller, wish I was a baller, wish I had a girl...</p>
+            </div>
+            <div class="row">
+              <div class="col bar-left">
+                  <div class="center stress">Likes</div>
+                  <div class="center" id="like-number">128</div>          
+              </div>
+              <div class="col">
+                  <div class="center stress">Followers</div>
+                  <div class="center" id="follow-number">52</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row left-col-row no-margin-bottom">
+          <ul class="col">
+            <li class="row">
+              <h6>Contact</h6>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-phone"></i>&nbsp;&nbsp;(510)-123-4567</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-home"></i>&nbsp;&nbsp;Berkeley, CA</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;babauta@berkeley.com</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-github"></i>&nbsp;&nbsp;leobabuta</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="col-9" id="right-col">
+        <li id="blog1" class="row border-bottom no-margin-bottom no-margin-top">
+          <div class="col content">
+            <a class="row title" href="8-experiments-in-motivation">8 Experiments in Motivation</a>
+            <div class="row author">     
+              <div class="bar-left">By Leo Babauta</div>
+              <div class="bar-right">Yesterday 01:28</div>
+            </div>
+            <p class="row abstract text-justify">
+              I was talking to a 19-year-old recently and he has been struggling with motivation. His problem goes like this: he gets excited about starting a project or plan, and is very motivated at the start... but after a few days, that feeling dies down, and he starts procrastinating. He really does want to do the project or follow through on the plan, but the motivation inevitably drops away...
+            </p>
+            <div class="row">
+              <span class="bar-left"><i class="fa fa-eye"></i>&nbsp;68</span>
+              <span class="bar-left bar-right"><i class="fa fa-comments-o"></i>&nbsp;132</span>
+              <span class="bar-right"><i class="fa fa-heart-o"></i>&nbsp;56</span>
+            </div>
+          </div>
+        </li>
+        <li id="blog2" class="row border-bottom no-margin-bottom no-margin-top">
+          <div class="col content">
+            <a class="row title" href="a-mindful-shift-of-focus">A Mindful Shift of Focus</a>
+            <div class="row author">     
+              <div class="bar-left">By Leo Babauta</div>
+              <div class="bar-right">June 15, 2017 15:23</div>
+            </div>
+            <p class="row abstract text-justify">
+              Throughout the day, we get frustrated, irritated, angry. We are frustrated in traffic, when a loved one doesn't behave the way we like, when someone tells us we're wrong, when technology doesn't work the way we want, when dinner is ruined, among many other daily stresses. These frustrations can build up into unhappiness, relationship problems, work problems, built up stress, blowing your top at someone when you lose your cool...
+            </p>
+            <div class="row">
+              <span class="bar-left"><i class="fa fa-eye"></i>&nbsp;28</span>
+              <span class="bar-left bar-right"><i class="fa fa-comments-o"></i>&nbsp;50</span>
+              <span class="bar-right"><i class="fa fa-heart-o"></i>&nbsp;28</span>
+            </div>
+          </div>
+        </li>
+        <li id="blog3" class="row border-bottom no-margin-bottom no-margin-top">
+          <div class="col content">
+            <a class="row title" href="how-to-develop-an-awesome-sense-of-direction">How to Develop an Awesome Sense of Direction</a>
+            <div class="row author">     
+              <div class="bar-left">By Leo Babauta</div>
+              <div class="bar-right">June 05, 2017 11:34</div>
+            </div>
+            <p class="row abstract text-justify">
+              It's strange, but I've discovered I have a better sense of direction than many people -- when I travel, it doesn't take that long for me to figure out the lay of the land, and soon I'm walking around almost like a local. But I've also found out that many other people don't have this good sense of direction, and it can make things difficult for them when they travel to a new place. I used to think maybe it was something you were born with or not, but I'm now convinced that it's a set of skills you can learn...
+            </p>
+            <div class="row">
+              <span class="bar-left"><i class="fa fa-eye"></i>&nbsp;56</span>
+              <span class="bar-left bar-right"><i class="fa fa-comments-o"></i>&nbsp;23</span>
+              <span class="bar-right"><i class="fa fa-heart-o"></i>&nbsp;42</span>
+            </div>
+          </div>
+        </li>
+        <li id="blog4" class="row border-bottom no-margin-bottom no-margin-top">
+          <div class="col content">
+            <a class="row title" href="training-to-be-a-good-writer">Training to Be a Good Writer</a>
+            <div class="row author">     
+              <div class="bar-left">By Leo Babauta</div>
+              <div class="bar-right">March 26, 2017 16:28</div>
+            </div>
+            <p class="row abstract text-justify">
+              I'm not going to claim to be the world's greatest writer, but I do think I'm reasonably competent. I've been training for 25 years, and I make a living as a writer. For those who are just starting out as writers, I'd like to share my training. I didn't wake up and suddenly know how to write -- I've been training for most of my life. A short background on my writing career: I started out as a sportswriter, as a senior in high school, and eventually became a full-time reporter and then editor for my local paper on Guam...
+            </p>
+            <div class="row">
+              <span class="bar-left"><i class="fa fa-eye"></i>&nbsp;42</span>
+              <span class="bar-left bar-right"><i class="fa fa-comments-o"></i>&nbsp;35</span>
+              <span class="bar-right"><i class="fa fa-heart-o"></i>&nbsp;73</span>
+            </div>
+          </div>
+        </li>
+        <li id="blog5" class="row border-bottom no-margin-bottom no-margin-top">
+          <div class="col content">
+            <a class="row title" href="what-productivity-systems-wont-solve">What Productivity Systems Won't Solve</a>
+            <div class="row author">     
+              <div class="bar-left">By Leo Babauta</div>
+              <div class="bar-right">January 17, 2016 00:08</div>
+            </div>
+            <p class="row abstract text-justify">
+              If you're like me, you're always looking for the perfect productivity system. Unfortunately, it doesn't exist. The problem isn't with the productivity system — the problem is that none of them can solve a few really important (and related) problems...
+            </p>
+            <div class="row">
+              <span class="bar-left"><i class="fa fa-eye"></i>&nbsp;128</span>
+              <span class="bar-left bar-right"><i class="fa fa-comments-o"></i>&nbsp;60</span>
+              <span class="bar-right"><i class="fa fa-heart-o"></i>&nbsp;69</span>
+            </div>
+          </div>
+        </li>
+        <li class="row no-margin-bottom no-margin-top">
+          <nav class="row justify-content-center" aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>              
+        </li>
+      </ul>
+    </div>
+    <footer class="row">
+      <div class="col">
+        <nav class="nav row justify-content-center no-margin-bottom">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact" target="_blank">Contact Us</a>
+        </nav>
+        <p class="row justify-content-center no-margin-top">Copyright © 2017-2020 J.S. Corporation, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

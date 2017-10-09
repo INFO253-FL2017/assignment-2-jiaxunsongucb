@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title id="blog1">8 Experiments in Motivation</title>
+    <!-- The existing framework I applied. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The files I wrote by myself. -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+  </head>
+  <body class="container-full" onload="showMessage()">
+    <header class="row">
+      <div class="col-5">
+        <h1 class="row no-margin-bottom justify-content-center" id="main-title">Leo Babauta's Blog</h1>
+        <nav class="row nav no-margin-top justify-content-center">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact" target="_blank">Contact Us</a>
+        </nav>
+      </div> 
+      <div class="col-4 align-self-center">
+        <div class="row justify-content-around">
+          <button class="col-3" type="button" name="like" onclick="likeNumberPlus()" style="height:30px;width:200px"><i class="fa fa-thumbs-o-up"></i>&nbsp;Like</button>
+          <button class="col-3" type="button" name="follow" onclick="followNumberPlus()" style="height:30px;width:200px"><i class="fa fa-plus"></i>&nbsp;Follow</button>
+        </div>        
+      </div>  
+    </header>
+    <div class="row justify-content-between"  id="main-content">
+      <div class="col-3" id="left-col">
+        <div class="row left-col-row">
+          <div class="col" id="info">
+            <div class="row justify-content-center">
+              <img id="portrait" class="rounded-circle" src="../static/images/index/portrait.png" alt="portrait">
+            </div>
+            <div class="row justify-content-center text-justify">
+              <h6>Leo Babauta</h6>
+              <p>I wish I was a little bit taller, wish I was a baller, wish I had a girl...</p>
+            </div>
+            <div class="row">
+              <div class="col bar-left">
+                  <div class="center stress">Likes</div>
+                  <div class="center" id="like-number">128</div>          
+              </div>
+              <div class="col">
+                  <div class="center stress">Followers</div>
+                  <div class="center" id="follow-number">52</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row left-col-row">
+          <ul class="col">
+            <li class="row">
+              <h6>Contact</h6>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-phone"></i>&nbsp;&nbsp;(510)-123-4567</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-home"></i>&nbsp;&nbsp;Berkeley, CA</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;babauta@berkeley.com</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-github"></i>&nbsp;&nbsp;leobabuta</span>
+            </li>
+          </ul>
+        </div>
+        <div class="row left-col-row no-margin-bottom">
+          <script type="text/javascript">weatherInfo()</script>
+          <ul class="col">
+            <li class="row">
+              <h6>Berkeley Weather</h6>
+            </li>
+            <li class="row">
+              <span class="col-7 weather"><strong>Weather:</strong></span>
+              <span class="col weather" id='weather'>N/A</span>
+            </li>
+            <li class="row">
+              <span class="col-7 weather"><strong>Temperature:</strong></span>
+              <span class="col weather" id='temp'>N/A</span>
+            </li>
+            <li class="row">
+              <span class="col-7 weather"><strong>Wind speed:</strong></span>
+              <span class="col weather" id='wind'>N/A</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-9 text-justify" id="right-col">
+        <div class="row border-bottom">
+          <div class="col">
+            <h1 class="border-bottom" style="text-align: left">8 Experiments in Motivation</h1>
+            <h2 class="border-bottom">By Leo Babauta</h2>
+            <p>I was talking to a 19-year-old recently and he has been struggling with motivation.</p>
+            <p>His problem goes like this: he gets excited about starting a project or plan, and is very motivated at the start... but after a few days, that feeling dies down, and he starts procrastinating.</p>
+            <p>He really does want to do the project or follow through on the plan, but the motivation inevitably drops away.</p>
+            <p>I told him this is something he should devote some effort to figuring out, because <strong>very few problems are as important to solve as this one.</strong></p>
+            <p>I suggested <strong>experiments in motivation.</strong> Every person is motivated differently (and in fact, that can shift), so finding methods that motivate you personally is a matter of experimenting.</p>
+            <p>I'm writing this post for him, and anyone else who might want to try these experiments.</p>
+            <p>How does it work? You <strong>try each experiment for a week, and note the results.</strong> After a couple months of doing this, you know more about your personal motivation style than ever before.</p>
+            <p>Here are eight motivation methods you could try:</p>
+            <ol  style="list-style-type: decimal">
+              <li><p><strong>Un-ignorable Consequences.</strong> Set a deadline for the task(s) you want to complete, and a consequence you won't be able to ignore. It's best to share this deadline and consequence with an accountability partner or publicly. Example: I post on Facebook I'm going to write 1,000 words in my book every day this week, or I can't watch TV for a week. (That only works if you really care about the consequence.) Another example: if I don't write my first chapter by Saturday at midnight, I have to donate $200 to Donald Trump (or whichever candidate you don't like) and post about it publicly. The idea is that the consequence should be embarrassing and something you can't just ignore.</p></li>
+              <li><p><strong>Completion Compulsion.</strong> Many people, myself included, have a strong desire to complete a list. For example, if you've watched 15 out of 20 episodes of a show, you might really want to finish watching the show. This is &quot;completion compulsion,&quot; and I think everyone experiences it sometime — especially if finishing the list seems doable. So the method is this: make a list of 10 small actions (10 minutes or less to complete) that you want to finish this week on a certain project, or 5 small actions you want to finish each day, and make it your goal to finish the list. You could combine this with the un-ignorable consequences method (if I don't finish my list each day, I can't have wine).</p></li>
+              <li><p><strong>A Powerful &quot;Why&quot;.</strong> Understand the deeper reasons you want to complete this goal or accomplish this task. It should be a reason that really resonates with you, that you deeply want to achieve. Now write your &quot;Why&quot; in a phrase (like, &quot;compassion for myself&quot; or &quot;to help others in pain&quot;), and post it somewhere visible, so you won't forget it.</p></li>
+              <li><p><strong>Get Excited Daily.</strong> It's easy to be excited about a project or goal when you first start, but that dies out. So renew it! Each day, start by setting a goal for the day that you can accomplish and that you care about. Find inspiration, visualize your accomplishment, find some music that motivates you, find an inspirational quote or video … anything to get you excited to accomplish your goal for the day!</p></li>
+              <li><p><strong>Focus on Being True to Your Word.</strong> One of the most important things in life is to be trusted, to have people believe that when you say you're going to do something, you'll do it. If people don't trust in that, you won't have good relationships, romantically, with friends, or at work. Imagine hiring someone and not knowing if they're going to show up, or do the work if they do show up. So you should make it one of your priorities in life to live the motto, &quot;Be True to Your Word.&quot; That starts with small things: tell someone you're going to do a small task that will only take 10-30 minutes. Then do it. Repeat this several times a day, building other people's trust in you and your own trust in yourself. Post the motto somewhere you won't forget it.</p></li>
+              <li><p><strong>Find a Group.</strong> Humans are social animals, and you can use that to your advantage. Create an accountability group of friends or colleagues who want to achieve a goal or finish a project. Agree to set daily or weekly targets, and check in with each other daily or weekly (form a Facebook group or subreddit, perhaps). Set rewards and/or embarrassing consequences for hitting or missing the targets. Have weekly &quot;winners&quot; for those who did the best at their targets. Encourage each other and help each other when someone is faltering.</p></li>
+              <li><p><strong>Focus on a Sense of Achievement.</strong> With every task you complete, pause at the end of it to savor your feeling of accomplishment. This is a great feeling! Share your victory with others. Savor the feeling of building trust in yourself. As you start a task, think about how good you'll feel when you accomplish it.</p></li>
+              <li><p><strong>Small Starts, Quick Rewards.</strong> Create a system where you have to do short tasks (just 10 minutes) and you get a small reward at the end of it. For example, I just need to write for 10 minutes, then I get to have my first coffee of the day. Or I clear my email inbox for 10 minutes, and then I get to check my favorite sites for 5 minutes. Don't let yourself have the reward unless you do the task! The smaller the task, the better, so you won't delay starting.</p></li>
+            </ol>
+            <p>OK, these are eight experiments, but you might think of others, like the Seinfeld Method or the Pomodoro Technique. All that matters is that you try the experiments, and note the results. At the end of each weekly experiment, write a brief review of how it went. Rate your productivity on a scale of 10. Then try another experiment.</p>
+            <p>At the end of these, you'll have tried a bunch of great methods, and figured out what helps you most. You might combine methods, or use different ones at different times. And maybe after all of this, you'll have a trust in yourself that's so strong, you don't need any methods!</p>            
+          </div>     
+        </div>
+        <div class="row">
+          <div class="col">
+            <h5 class="row"><i class="fa fa-comments-o"></i>&nbsp;Leave a Comment!</h5>
+            <h6 class="row">History Comments:</h6>
+            <div class="row previous-messages">
+              <ul class="col" id="scroll" style="list-style-type:none">
+                <li class="scroll-li border-bottom">
+                  <span class="label">Jason</span>&nbsp;wrote:&nbsp;
+                  <span>This article is awesome!!</span>
+                </li>
+                <li class="scroll-li border-bottom">
+                  <span class="label">Micheal</span>&nbsp;wrote:&nbsp;
+                  <span>Interesing points!</span>
+                </li>
+                <li class="scroll-li border-bottom">
+                  <span class="label">Lily</span>&nbsp;wrote:&nbsp;
+                  <span>I love this article!</span>
+                </li>
+                <li class="scroll-li border-bottom">
+                  <span class="label">Rachel</span>&nbsp;wrote:&nbsp;
+                  <span>Like this guy!</span>
+                </li>
+              </ul>
+            </div>
+            <h6 class="row">Your Comment:</h6>
+            <div class="row" id="your-comment">
+              <form class="col-9" id="messages">
+                <div class="row">
+                  <span class="label">Name:&nbsp;</span>
+                  <textarea name="name" cols="30" rows="1" id="comment-name" maxlength="100"></textarea>
+                </div>
+                <div class="row">
+                  <span class="label">Message:&nbsp;</span>
+                  <textarea name="message" cols="51" rows="5" id="comment-message" maxlength="140" placeholder="Your message cannot be longer than 140 letters."></textarea>
+                </div>
+                <div class="row justify-content-end">
+                  <button type="submit" style="height:25px;width:100px" onclick="sendMessage()">Submit</button>
+                </div>
+              </form>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="row">
+      <div class="col">
+        <nav class="nav row justify-content-center no-margin-bottom">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact" target="_blank">Contact Us</a>
+        </nav>
+        <p class="row justify-content-center no-margin-top">Copyright © 2017-2020 J.S. Corporation, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

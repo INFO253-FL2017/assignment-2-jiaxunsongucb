@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <!-- The existing framework I applied. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The files I wrote by myself. -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js"></script>
+  </head>
+  <body class="container-full">
+    {% if not init %}
+      {% if success %}
+      <div class="row justify-content-center success">
+        <ul style="list-style-type: none">
+          {% for notification in notifications %}
+          <li>{{ notification }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <div class="row justify-content-center warning">
+        <ul>
+          {% for notification in notifications %}
+          <li>{{ notification }}</li>
+          {% endfor %}
+        </ul>      
+      </div>
+      {% endif %}
+    {% endif %}
+    <header class="row">
+      <div class="col-5">
+        <h1 class="row no-margin-bottom justify-content-center" id="main-title">Leo Babauta's Blog</h1>
+        <nav class="row nav no-margin-top justify-content-center">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact">Contact Us</a>
+        </nav>
+      </div> 
+      <div class="col-4 align-self-center">
+        <div class="row justify-content-around">
+          <button class="col-3" type="button" name="like" onclick="likeNumberPlus()" style="height:30px;width:200px"><i class="fa fa-thumbs-o-up"></i>&nbsp;Like</button>
+          <button class="col-3" type="button" name="follow" onclick="followNumberPlus()" style="height:30px;width:200px"><i class="fa fa-plus"></i>&nbsp;Follow</button>
+        </div>        
+      </div>  
+    </header>
+    <div class="row justify-content-between"  id="main-content">
+      <div class="col-3" id="left-col">
+        <div class="row left-col-row">
+          <div class="col" id="info">
+            <div class="row justify-content-center">
+              <img id="portrait" class="rounded-circle" src="/static/images/index/portrait.png" alt="portrait">
+            </div>
+            <div class="row justify-content-center text-justify">
+              <h6>Leo Babauta</h6>
+              <p>I wish I was a little bit taller, wish I was a baller, wish I had a girl...</p>
+            </div>
+            <div class="row">
+              <div class="col bar-left">
+                  <div class="center stress">Likes</div>
+                  <div class="center" id="like-number">128</div>          
+              </div>
+              <div class="col">
+                  <div class="center stress">Followers</div>
+                  <div class="center" id="follow-number">52</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row left-col-row no-margin-bottom">
+          <ul class="col">
+            <li class="row">
+              <h6>Contact</h6>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-phone"></i>&nbsp;&nbsp;(510)-123-4567</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-home"></i>&nbsp;&nbsp;Berkeley, CA</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;babauta@berkeley.com</span>
+            </li>
+            <li class="row">
+              <span><i class="fa fa-github"></i>&nbsp;&nbsp;leobabuta</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-9 text-justify" id="right-col">
+        <div class="row">
+            <form class="col-9" id="contact_us" action="/contact" method="POST">
+              <h2 class="row">Contact Us</h2>
+              <div class="row">
+                <span class="label">Name:&nbsp;</span>
+                <textarea name="name" cols="30" rows="1" maxlength="100">{{name}}</textarea>
+              </div>
+              <div class="row">
+                <span class="label">Subject:&nbsp;</span>
+                <textarea name="subject" cols="30" rows="1" maxlength="100">{{subject}}</textarea>
+              </div>
+              <div class="row">
+                <span class="label">Email:&nbsp;</span>
+                <textarea name="email" cols="30" rows="1" maxlength="100">{{email}}</textarea>
+              </div>
+              <div class="row">
+                <span class="label">Message:&nbsp;</span>
+                <textarea name="message" cols="55" rows="5">{{message}}</textarea>
+              </div>
+              <div class="row justify-content-end">
+                <button type="submit" style="height:25px;width:100px">Submit</button>
+              </div>
+            </form>       
+        </div>
+      </div>
+    </div>
+    <footer class="row">
+      <div class="col">
+        <nav class="nav row justify-content-center no-margin-bottom">
+          <a class="nav-link" href="index">Homepage</a>
+          <a class="nav-link" href="about" target="_blank">About Us</a>
+          <a class="nav-link" href="contact">Contact Us</a>
+        </nav>
+        <p class="row justify-content-center no-margin-top">Copyright © 2017-2020 J.S. Corporation, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

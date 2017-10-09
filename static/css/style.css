@@ -1,3 +1,167 @@
-h1 {
-	color: blue;
+@import url('https://fonts.googleapis.com/css?family=Anton');
+.container-full {
+	width: 900px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+iframe {
+	margin: auto auto;
+}
+
+body {
+	padding: 10px 20px;
+	font-size: 0.8em;
+}
+
+#main-title{
+	font-family: 'Anton', sans-serif !important;
+	margin: 20px auto;
+}
+
+.row{
+	margin: 10px auto;
+}
+
+
+.tab-pane{
+	padding: 0px 0px !important;
+}
+
+#portrait{
+	width: 130px;
+	height: 130px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+.border-bottom{
+	border-bottom: 0.5px solid !important;
+	border-bottom-color: rgb(220,220,220) !important;
+}
+
+.author{
+	font-weight: 600;
+}
+
+.bar-left{
+	border-right: 0.5px solid !important;
+	border-right-color: rgb(220,220,220) !important;
+}
+
+.bar-right{
+	padding-left: 5px;
+}
+
+.bar-left{
+	padding-right: 5px;
+}
+
+.author{
+	margin: 0px 0px !important;
+}
+
+.title{
+	font-size: 1.6em;
+	font-weight:bold;
+	margin-bottom: 0px !important;
+}
+
+.container-full{
+	background-color: rgb(245,248,250);
+}
+
+.left-col-row, #right-col, .previous-messages, #your-comment, .warning, .success, footer, header{
+	background-color: rgb(255,255,255) !important;
+	border-radius: 3px;
+	border: 0.5px solid !important;
+	border-color: rgb(220,220,220) !important;
+}
+
+.warning{
+	background-color: rgb(250,210,210) !important;
+	font-size: 1.2em;
+	padding: 5px 0;
+}
+
+.success{
+	background-color: rgb(110,210,170) !important;
+	font-size: 1.2em;
+	padding: 5px 0;
+}
+
+#right-col{
+	-ms-flex: 0 0 73%;
+	flex: 0 0 73%;
+	max-width: 73%;
+}
+
+#left-col{
+	padding: 0 0 !important;
+}
+
+.left-col-row{
+	margin-top: 0px !important;
+	margin-bottom: 15px !important;
+	padding:10px 10px !important;
+}
+
+#main-content{
+	margin: 15px 0px;
+}
+
+a{ text-decoration:none !important;}
+
+button{
+	padding: 0px 0px !important;
+}
+
+.center{
+	text-align: center;
+}
+
+.no-margin-bottom{
+	margin-bottom: 0px !important;
+}
+
+.no-margin-top{
+	margin-top: 0px !important;
+}
+
+.stress{
+	font-weight: 700;
+}
+
+.panel{
+	display:none;
+}
+
+.previous-messages{
+	height:104px;
+	overflow: auto;
+}
+
+.scroll-li{
+	padding:8px;
+}
+
+#scroll{
+	padding: 0 6px;
+}
+
+.label{
+	width: 65px;
+	float: left;
+	text-align: right;
+	font-weight: 600;
+}
+
+textarea {
+   resize: none;
+}
+
+.weather {
+	padding: 0 0;
 }
