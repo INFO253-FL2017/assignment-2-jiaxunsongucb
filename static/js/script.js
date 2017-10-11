@@ -1,3 +1,36 @@
+// Gives a prompt on the top of the page.
+function prompt(type, m) {
+	var div=document.createElement("div");
+	var att = document.createAttribute("class");
+	att.value = "row justify-content-center "+type;
+	div.setAttributeNode(att);
+	div.innerHTML=m;
+	var body = document.getElementsByClassName("container-full")[0];
+	body.insertBefore(div, body.firstChild);
+	setTimeout(function(){body.removeChild(body.firstChild)},5000);		
+}
+
+// Judge whether the user misses anything to fill out.
+function contactUs() {
+	var locationForm = document.forms["contact_us"];
+	var name = locationForm["name"].value;
+	var subject = locationForm["subject"].value;
+	var message = locationForm["message"].value;
+	if (message==''){
+		prompt('warning', 'Please enter your message!');
+	}
+	if (subject==''){
+		prompt('warning', 'Please enter your subject!');
+	}
+	if (name==''){
+		prompt('warning', 'Please enter your name!');
+	}
+	if (name!='' && subject!='' && message!=''){
+		return true
+	}
+	event.preventDefault();
+}
+
 // Adds messages to the history messages box.
 function addMessage(name, message){
 	var scroll = document.getElementById("scroll");
