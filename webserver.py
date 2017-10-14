@@ -71,7 +71,7 @@ def contact_us_email():
     if r.status_code == requests.codes.ok:
         notifications.append('Hi {}, your message has been sent.'.format(name))
     else:
-        notifications.append("You email was not sent. Please try again later")
+        notifications.append("You email was not sent. Please try again later.")
         success=False
     return render_template("contact_us.html",success=success,init=False,notifications=notifications,name='',subject='',message='',email='') # Render the template located in "templates/contact_us.html"
 

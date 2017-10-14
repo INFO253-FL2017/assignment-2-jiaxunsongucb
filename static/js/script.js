@@ -1,13 +1,61 @@
 // Gives a prompt on the top of the page.
-function prompt(type, m) {
+function prompt(name, subject, message) {
 	var div=document.createElement("div");
 	var att = document.createAttribute("class");
-	att.value = "row justify-content-center "+type;
+	att.value = "row alert alert-danger justify-content-center";
 	div.setAttributeNode(att);
-	div.innerHTML=m;
+	var att2 = document.createAttribute("id");
+	att2.value = "prompt";
+	div.setAttributeNode(att2);	
+	var ul=document.createElement("ul");
+	var li1=document.createElement("li");
+	li1.innerHTML='Please enter your name!';
+	var li2=document.createElement("li");
+	li2.innerHTML='Please enter your subject!';
+	var li3=document.createElement("li");
+	li3.innerHTML='Please enter your message!';
+	if (name==''){
+		ul.appendChild(li1)
+	};
+	if (subject==''){
+		ul.appendChild(li2)
+	};
+	if (message==''){
+		ul.appendChild(li3)
+	};
+	div.appendChild(ul)
 	var body = document.getElementsByClassName("container-full")[0];
 	body.insertBefore(div, body.firstChild);
-	setTimeout(function(){body.removeChild(body.firstChild)},5000);		
+	prompt_disappear()
+}
+
+// Click the form to make the warning message disappear.
+function prompt_disappear(){
+	function disappear(){
+		var prompt = document.getElementById("prompt");
+		prompt.parentNode.removeChild(prompt);
+	}
+	var locationForm = document.forms["contact_us"];
+	var name = locationForm["name"];
+	var subject = locationForm["subject"];
+	var message = locationForm["message"];
+	name.addEventListener("click", disappear);
+	subject.addEventListener("click", disappear);
+	message.addEventListener("click", disappear);	
+}
+
+if (document.getElementById("prompt")){
+	function disappear(){
+		var prompt = document.getElementById("prompt");
+		prompt.parentNode.removeChild(prompt);
+	}
+	var locationForm = document.forms["contact_us"];
+	var name = locationForm["name"];
+	var subject = locationForm["subject"];
+	var message = locationForm["message"];
+	name.addEventListener("click", disappear);
+	subject.addEventListener("click", disappear);
+	message.addEventListener("click", disappear);
 }
 
 // Judge whether the user misses anything to fill out.
@@ -16,17 +64,11 @@ function contactUs() {
 	var name = locationForm["name"].value;
 	var subject = locationForm["subject"].value;
 	var message = locationForm["message"].value;
-	if (message==''){
-		prompt('warning', 'Please enter your message!');
-	}
-	if (subject==''){
-		prompt('warning', 'Please enter your subject!');
-	}
-	if (name==''){
-		prompt('warning', 'Please enter your name!');
-	}
 	if (name!='' && subject!='' && message!=''){
 		return true
+	}
+	else {
+		prompt(name, subject, message);
 	}
 	event.preventDefault();
 }
