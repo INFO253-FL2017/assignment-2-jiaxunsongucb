@@ -24,38 +24,22 @@ function prompt(name, subject, message) {
 		ul.appendChild(li3)
 	};
 	div.appendChild(ul)
+	disappear()
 	var body = document.getElementsByClassName("container-full")[0];
 	body.insertBefore(div, body.firstChild);
-	prompt_disappear()
 }
 
 // Click the form to make the warning message disappear.
-function prompt_disappear(){
-	function disappear(){
+function disappear(){
+	if (document.getElementById("prompt")){
 		var prompt = document.getElementById("prompt");
 		prompt.parentNode.removeChild(prompt);
 	}
-	var locationForm = document.forms["contact_us"];
-	var name = locationForm["name"];
-	var subject = locationForm["subject"];
-	var message = locationForm["message"];
-	name.addEventListener("click", disappear);
-	subject.addEventListener("click", disappear);
-	message.addEventListener("click", disappear);	
 }
-
-if (document.getElementById("prompt")){
-	function disappear(){
-		var prompt = document.getElementById("prompt");
-		prompt.parentNode.removeChild(prompt);
-	}
-	var locationForm = document.forms["contact_us"];
-	var name = locationForm["name"];
-	var subject = locationForm["subject"];
-	var message = locationForm["message"];
-	name.addEventListener("click", disappear);
-	subject.addEventListener("click", disappear);
-	message.addEventListener("click", disappear);
+if (document.forms["contact_us"]){
+	document.forms["contact_us"]["name"].addEventListener("click", disappear);
+	document.forms["contact_us"]["subject"].addEventListener("click", disappear);
+	document.forms["contact_us"]["message"].addEventListener("click", disappear);	
 }
 
 // Judge whether the user misses anything to fill out.
