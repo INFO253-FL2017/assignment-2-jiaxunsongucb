@@ -11,19 +11,19 @@
  3. How does Python and Flask work together in the server for this assignment?
  Python, namely the webserver.py file is running under the framework of FLask (which is also a module in Python). When the flask is run, it creates a host through which a client can request data. And in the webserver.py file, routes and corresponding functions are defined. When the client goes to a route, such as http://localhost:5000/index, the flask will look for this route in the webserver.py file and call the corresponding function to return the requested data.
  4. List all of the possible GET and POST requests that your server returns a response for and describes what happens for each GET and POST request
-- "GET /index HTTP/1.1" 200 - successful GET request that obtains the content from the route "/index".
-- "GET /static/css/style.css HTTP/1.1" 200 - successful GET request that obtains the css file from the route "/static/css/style.css".
-- "GET /static/js/script.js HTTP/1.1" 200 - successful GET request that obtains the js file from the route "/static/js/script.js".
-- "GET /static/images/index/portrait.png HTTP/1.1" 200 - successful GET request that obtains the image file from the route "/static/images/index/portrait.png".
-- "GET /about HTTP/1.1" 200 - successful GET request that obtains the content from the route "/about".
-- "GET /static/css/about_us.css HTTP/1.1" 200 - successful GET request that obtains the content from the route "/index".
-- "GET /static/images/about_us/nick_wilde.jpg HTTP/1.1" 200 - successful GET request that obtains the content from the route "/static/images/about_us/nick_wilde.jpg".
-- "GET /static/images/about_us/harry_potter_poster.jpg HTTP/1.1" 200 - successful GET request that obtains the content from the route "/static/images/about_us/harry_potter_poster.jpg".
-- "GET /contact HTTP/1.1" 200 - successful GET request that obtains the content from the route "/contact".
-- "GET /blog/8-experiments-in-motivation HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/8-experiments-in-motivation".
-- "GET /blog/a-mindful-shift-of-focus HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/a-mindful-shift-of-focus".
-- "GET /blog/how-to-develop-an-awesome-sense-of-direction HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/how-to-develop-an-awesome-sense-of-direction".
-- "GET /blog/training-to-be-a-good-writer HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/training-to-be-a-good-writer".
-- "GET /blog/what-productivity-systems-wont-solve HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/what-productivity-systems-wont-solve".
-- "POST /contact HTTP/1.1" 200 - successful POST request that sends data from contact page to the server and get the content from the route "/contact".
+	- "GET /index HTTP/1.1" 200 - successful GET request that obtains the content from the route "/index".
+	- "GET /static/css/style.css HTTP/1.1" 200 - successful GET request that obtains the css file from the route "/static/css/style.css".
+	- "GET /static/js/script.js HTTP/1.1" 200 - successful GET request that obtains the js file from the route "/static/js/script.js".
+	- "GET /static/images/index/portrait.png HTTP/1.1" 200 - successful GET request that obtains the image file from the route "/static/images/index/portrait.png".
+	- "GET /about HTTP/1.1" 200 - successful GET request that obtains the content from the route "/about".
+	- "GET /static/css/about_us.css HTTP/1.1" 200 - successful GET request that obtains the css file from the route "/static/css/about_us.css".
+	- "GET /static/images/about_us/nick_wilde.jpg HTTP/1.1" 200 - successful GET request that obtains the image from the route "/static/images/about_us/nick_wilde.jpg".
+	- "GET /static/images/about_us/harry_potter_poster.jpg HTTP/1.1" 200 - successful GET request that obtains the image from the route "/static/images/about_us/harry_potter_poster.jpg".
+	- "GET /contact HTTP/1.1" 200 - successful GET request that obtains the content from the route "/contact".
+	- "GET /blog/8-experiments-in-motivation HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/8-experiments-in-motivation".
+	- "GET /blog/a-mindful-shift-of-focus HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/a-mindful-shift-of-focus".
+	- "GET /blog/how-to-develop-an-awesome-sense-of-direction HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/how-to-develop-an-awesome-sense-of-direction".
+	- "GET /blog/training-to-be-a-good-writer HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/training-to-be-a-good-writer".
+	- "GET /blog/what-productivity-systems-wont-solve HTTP/1.1" 200 - successful GET request that obtains the content from the route "/blog/what-productivity-systems-wont-solve".
+	- "POST /contact HTTP/1.1" 200 - successful POST request that sends data from contact page to the server and get the content from the route "/contact".
 
